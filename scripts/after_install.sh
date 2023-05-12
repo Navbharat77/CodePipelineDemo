@@ -1,12 +1,14 @@
 #!/bin/bash
 
-#_Change_Working_Directory
-cd /home/ec2-user/server
+# navigate to app folder
+cd /app
 
-#_Remove_Unused_Code
-rm -rf node_modules
-rm -rf build
+# install dependencies
+npm install
 
-#Install_node_modules_&_Make_React_Build
-#npm install
-#npm run build
+# install create-react-app and react-scripts
+# without react-scripts application cannot be started
+npm install --save create-react-app react-scripts
+
+# install pm2 process manager
+npm install pm2 -g
